@@ -1,57 +1,179 @@
 body{
-	background-color: #FFEAEA;
-	color: #E11299;
+	width: 100%;
+	height: 100%;
+	background-color: #041C32;
+	color: #C07F00;
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
 
-.topnav {
-	position: fixed;
+canvas{
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.b-rad{
+	border-radius: 50%;
+}
+
+/*---------------
+	PROFILE
+----------------*/
+
+
+#gradasi {
 	width: 100%;
-	overflow: hidden;
-	background-color: #FFACAC;
-	height: 70px;
-}
-
-.topnav a {
-	float: right;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 23px 16px;
-	text-decoration: none;
-	font-size: 20px;
-}
-
-.topnav li {
-	float: left;
-	text-align: center;
-	padding-top: 11px;
-	text-decoration: none;
-	color: #FFACAC;
-}
-
-.topnav a:hover {
-	background-color: #DF2E38;
-	color: black;
-}
-
-.gradasi {
-	padding-top: 80px;
-	height: 800px;
-	background: #FFEAEA;
-    background: linear-gradient(to top, #FFEAEA 0%, #FFACAC 80%);
+	height: 100vh;
+	background: #FFF7D4;
+    background-image: linear-gradient(0deg, #FFF7D4, #FFD95A 90%);	
+    background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: 50% 50%;
     color: #000;
     text-align: center;
+    z-index: 1;
 }
 
-.gradasi img{
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+#gradasi img{
 	border-radius: 50%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.gradasi em{
+#gradasi em{
 	font-size: 20px;
 }
 
+
+/*---------------
+	CONTENT
+----------------*/
+
+
+#tentang {
+	padding: 50px;
+	color: #FFF;
+	background-color: #FFF7D4;
+}
+
+.aboutme	{
+	text-align: left;
+	padding: 40px;
+	border-width: thin;
+	border-color: #FFACAC;
+	background-color: #C07F00;
+}
+
+.aboutme:hover {
+	cursor: unset;
+    background-image: linear-gradient(45deg, #9E6F21, #C07F00);
+    transform: scale(1.02);
+}
+
+.aboutme img{
+	max-width: 100%; 
+    display:block; 
+    height: auto;
+}
+
+
+.skills	{
+	text-align: left;
+	padding: 40px;
+	border-width: thin;
+	border-color: #C07F00;
+	background-color: #C07F00;
+}
+
+.skills:hover {
+	cursor: unset;
+    background-image: linear-gradient(45deg, #9E6F21, #C07F00);
+    transform: scale(1.02);
+}
+
+.education	{
+	text-align: center;
+	padding: 40px;
+	border-width: thin;
+	border-color: #C07F00;
+	background-color: #C07F00;
+}
+
+.education:hover {
+	cursor: unset;
+    background-image: linear-gradient(45deg, #9E6F21, #C07F00);
+    transform: scale(1.02);
+}
+
+/*-----------------
+PROJECT
+------------------*/
+
+.gradasi2 {
+	padding: 40px;
+	background: #FFF7D4;
+    background: linear-gradient(to top, #FFD95A 0%, #FFF7D4 90%);
+    color: #000;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}	
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(0);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-100%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+
+/*-----------------
+COPYRIGHT
+------------------*/
+
+.hak{
+	width: 100%;
+	overflow: hidden;
+	background-color: #FFD95A ;
+	height: 120px;	
+}
+
+.hak p{
+	color: #000;
+	text-align: center;
+	padding: 40px;
+}
