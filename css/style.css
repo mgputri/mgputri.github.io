@@ -61,7 +61,7 @@ canvas{
 
 
 #tentang {
-	padding: 50px;
+	padding: 10px;
 	color: #FFF;
 	background-color: #FFF7D4;
 }
@@ -77,7 +77,7 @@ canvas{
 .aboutme:hover {
 	cursor: unset;
     background-image: linear-gradient(45deg, #9E6F21, #C07F00);
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .aboutme img{
